@@ -16,52 +16,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dP-i2-IKy">
-                                <rect key="frame" x="67.5" y="206" width="279" height="72"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8u-0I-R7a">
-                                <rect key="frame" x="124" y="415" width="290" height="60"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="RESET">
-                                    <color key="titleColor" systemColor="systemGreenColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbF-F1-wcF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRC-Fb-QmK">
-                                <rect key="frame" x="0.0" y="415" width="124" height="60"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="START">
-                                    <color key="titleColor" systemColor="systemPinkColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="startStopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ef-Kp-ak4"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="lZN-sQ-Ej7">
+                                <rect key="frame" x="8" y="360" width="398" height="176"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ahL-tj-vM3">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="72"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dP-i2-IKy">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="lI8-vh-266">
+                                        <rect key="frame" x="0.0" y="104" width="398" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRC-Fb-QmK">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="72"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="START">
+                                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startStopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYZ-wc-hhU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8u-0I-R7a">
+                                                <rect key="frame" x="200" y="0.0" width="198" height="72"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="RESET">
+                                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbF-F1-wcF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GRC-Fb-QmK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4kZ-uD-UwW"/>
-                            <constraint firstItem="GRC-Fb-QmK" firstAttribute="width" secondItem="A8u-0I-R7a" secondAttribute="width" multiplier="0.427586" id="9lL-U4-M8u"/>
-                            <constraint firstItem="A8u-0I-R7a" firstAttribute="centerY" secondItem="GRC-Fb-QmK" secondAttribute="centerY" id="NQa-Y9-vh4"/>
-                            <constraint firstItem="GRC-Fb-QmK" firstAttribute="width" secondItem="A8u-0I-R7a" secondAttribute="width" multiplier="0.427586" id="Xaj-FS-jRa"/>
-                            <constraint firstItem="3dP-i2-IKy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="162" id="gol-V5-jYN"/>
-                            <constraint firstItem="3dP-i2-IKy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rXx-FY-Z8L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A8u-0I-R7a" secondAttribute="trailing" id="vjV-He-dI9"/>
-                            <constraint firstItem="GRC-Fb-QmK" firstAttribute="top" secondItem="3dP-i2-IKy" secondAttribute="bottom" constant="137" id="xjt-co-d53"/>
-                            <constraint firstItem="A8u-0I-R7a" firstAttribute="leading" secondItem="GRC-Fb-QmK" secondAttribute="trailing" id="zAO-f5-OmF"/>
+                            <constraint firstItem="lZN-sQ-Ej7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Izw-Gm-RTc"/>
+                            <constraint firstItem="lZN-sQ-Ej7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MKX-v6-5tQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lZN-sQ-Ej7" secondAttribute="trailing" constant="8" id="Xpx-lA-mW2"/>
+                            <constraint firstItem="lZN-sQ-Ej7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k8G-Ca-zSe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="resetButton" destination="A8u-0I-R7a" id="U6Z-fe-acY"/>
-                        <outlet property="startStopButton" destination="GRC-Fb-QmK" id="jD2-2L-yvp"/>
+                        <outlet property="startStopButton" destination="GRC-Fb-QmK" id="ZHb-dv-htC"/>
                         <outlet property="timeLabel" destination="3dP-i2-IKy" id="8kK-qz-qi9"/>
                     </connections>
                 </viewController>
